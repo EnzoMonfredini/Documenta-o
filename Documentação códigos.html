@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação- Projetos </title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para as abas */
+        .tab {
+            display: none;
+        }
+        .active-tab {
+            display: block;
+        }
+        .tab-button {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Documentação dos Códigos</h1>
+    </header>
+
+    <div>
+        <!-- Abas -->
+        <div class="tab-button" onclick="openTab('tab1')">Sistema de Controle de Dados</div>
+        <div class="tab-button" onclick="openTab('tab2')">Sistema de Transportes</div>
+    </div>
+
+    <div>
+        <!-- Conteúdo das abas -->
+        <div id="tab1" class="tab">
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Documentação do Código - Sistema de Controle de Dados</title>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+                <header>
+                    <h1>Documentação do Código - Sistema de Controle de Dados</h1>
+                </header>
+            
+                <section id="introduction">
+                    <h2>Introdução</h2>
+                    <p>
+                        Este documento descreve o funcionamento e a estrutura do código do Sistema de Controle de Dados, que é desenvolvido em Python. O sistema utiliza várias bibliotecas, como gspread, mysql.connector, tkinter, openpyxl, para gerenciar e automatizar a leitura de planilhas, cálculo de estatísticas e inserção de dados em um banco de dados MySQL.
+                    </p>
+                </section>
+            
+                <section id="visao-geral">
+                    <h2>Visão Geral</h2>
+                    <p>
+                        O Sistema de Controle de Dados tem como objetivo permitir aos usuários acessar e analisar planilhas, calcular diversas estatísticas relacionadas aos dados contidos nelas e armazenar essas estatísticas em um banco de dados MySQL. As principais funcionalidades incluem:
+                    </p>
+                    <ul>
+                        <li>Acesso à Planilha: O sistema permite ao usuário acessar uma planilha no Google Sheets com base no mês fornecido.</li>
+                        <li>Cálculo de Estatísticas: Calcula várias estatísticas relacionadas às informações da planilha, incluindo contagem de infrutíferas, contagem de origens, categorização de programação e rota extra, contagem de NO SHOW e muito mais.</li>
+                        <li>Inserção no Banco de Dados: As estatísticas calculadas podem ser inseridas em um banco de dados MySQL para análises futuras.</li>
+                        <li>Exportação para Excel: As estatísticas podem ser exportadas para uma planilha Excel para fins de relatórios ou arquivamento.</li>
+                    </ul>
+                </section>
+            
+                <section id="bibliotecas-principais">
+                    <h2>Bibliotecas Principais</h2>
+                    <p>
+                        O código faz uso das seguintes bibliotecas Python:
+                    </p>
+                    <ul>
+                        <li><code>gspread</code>: Utilizado para autenticação e manipulação de planilhas do Google Sheets.</li>
+                        <li><code>mysql.connector</code>: Usado para a conexão e manipulação de um banco de dados MySQL.</li>
+                        <li><code>tkinter</code>: Para criar a interface gráfica do aplicativo.</li>
+                        <li><code>openpyxl</code>: Para criar e salvar planilhas Excel.</li>
+                        <li><code>google.oauth2</code>: Para autenticação com o arquivo JSON.</li>
+                        <li><code>datetime</code>: Para lidar com datas e horários.</li>
+                    </ul>
+                </section>
+            
+                <!-- ... Seções para outras funções e detalhes ... -->
+            
+                <section id="utilizacao">
+                    <h2>Utilização</h2>
+                    <p>
+                        O sistema requer que o usuário forneça o mês para acessar a planilha. Após a leitura da planilha, as estatísticas podem ser calculadas e inseridas em um banco de dados MySQL ou exportadas para uma planilha Excel. A interface gráfica facilita o uso e interação com o sistema.
+                    </p>
+                </section>
+            
+                <section id="conclusao">
+                    <h2>Conclusão</h2>
+                    <p>
+                        Este código é uma demonstração de como usar Python e várias bibliotecas para automatizar tarefas relacionadas à leitura e análise de dados em planilhas. Ele oferece funcionalidades de acesso a planilhas, cálculo de estatísticas e armazenamento em um banco de dados para análises futuras.
+                    </p>
+                </section>
+            
+                <footer>
+                    <p>Copyright &copy; 2023 Enzo Lelis Musto Macedo. Todos os direitos reservados.</p>
+                </footer>
+            </body>
+            </html>
+            
+        </div>
+
+        <div id="tab2" class="tab">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação do Código - Sistema de Transportes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Documentação do Código - Sistema de Transportes</h1>
+    </header>
+
+    <section id="introduction">
+        <h2>Introdução</h2>
+        <p>
+            Este documento descreve o funcionamento e a estrutura do código de um sistema de transportes desenvolvido em Python. O sistema utiliza bibliotecas como gspread, pandas, pyperclip, tkinter, e outras, para gerenciar e automatizar a comunicação com planilhas do Google Sheets, criar mensagens de atendimento e realizar ações relacionadas ao transporte de cargas.
+        </p>
+    </section>
+
+    <section id="visao-geral">
+        <h2>Visão Geral</h2>
+        <p>
+            O sistema é composto por duas principais funcionalidades:
+        </p>
+        <ul>
+            <li><strong>Envio de Mensagens:</strong> Permite ao usuário criar mensagens de atendimento para motoristas com base em informações de uma planilha do Google Sheets. A mensagem é criada, copiada para a área de transferência e, opcionalmente, enviada via WhatsApp.</li>
+            <li><strong>Relatório de Carga e Descarga:</strong> Permite ao usuário visualizar e pesquisar informações de uma planilha do Google Sheets relacionadas ao transporte, bem como gerar um relatório de carga e descarga.</li>
+        </ul>
+    </section>
+
+    <section id="bibliotecas-principais">
+        <h2>Bibliotecas Principais</h2>
+        <p>
+            O código faz uso das seguintes bibliotecas Python:
+        </p>
+        <ul>
+            <li><code>gspread</code>: Para autenticação e manipulação de planilhas do Google Sheets.</li>
+            <li><code>pandas</code>: Para processamento e manipulação de dados tabulares.</li>
+            <li><code>pyperclip</code>: Para copiar mensagens para a área de transferência.</li>
+            <li><code>tkinter</code>: Para criar a interface gráfica do aplicativo.</li>
+            <li><code>google.oauth2</code>: Para autenticação via arquivo JSON.</li>
+            <li><code>pywhatkit</code>: Para enviar mensagens via WhatsApp.</li>
+            <li><code>pandastable</code>: Para exibir dados em tabelas na interface gráfica.</li>
+        </ul>
+    </section>
+
+    <section id="funcoes-principais">
+        <h2>Funções Principais</h2>
+        <p>
+            O código é dividido em várias funções que desempenham papéis específicos. Aqui estão as funções mais relevantes:
+        </p>
+        <ul>
+            <li><strong>login():</strong> Realiza a autenticação no Google Sheets usando credenciais do arquivo JSON.</li>
+            <li><strong>leitor(nome_planilha, nome_aba):</strong> Lê os dados de uma planilha e aba específicas no Google Sheets e os converte em um DataFrame do Pandas.</li>
+            <li><strong>criar_mensagem():</strong> Cria mensagens de atendimento com base nas informações da planilha e permite copiá-las para a área de transferência.</li>
+            <li><strong>enviar_mensagem():</strong> Envia a mensagem criada via WhatsApp, se o número de telefone do destinatário for encontrado.</li>
+            <li><strong>visualizar_planilha():</strong> Permite ao usuário visualizar a planilha do Google Sheets na interface gráfica.</li>
+            <li><strong>pesquisar_na_planilha():</strong> Permite ao usuário pesquisar informações na planilha com base em um termo de pesquisa.</li>
+            <li><strong>gerar_relatorio_carga_descarga():</strong> Gera um relatório de carga e descarga, que pode ser implementado posteriormente.</li>
+        </ul>
+    </section>
+
+    <section id="interface-grafica">
+        <h2>Interface Gráfica</h2>
+        <p>
+            O código utiliza a biblioteca tkinter para criar uma interface gráfica com duas abas: "Envio de Mensagens" e "Relatório de Carga e Descarga". O usuário pode interagir com o sistema por meio dessa interface.
+        </p>
+    </section>
+
+    <section id="utilizacao">
+        <h2>Utilização</h2>
+        <p>
+            O sistema requer a inserção de informações como o nome do mês, nome do atendente e ID da carga para criar mensagens de atendimento. O usuário pode escolher entre o "Dia Atual" e o "Dia Seguinte" para buscar informações na planilha. A função de pesquisa só está disponível após a visualização inicial da planilha.
+        </p>
+    </section>
+
+    <section id="conclusao">
+        <h2>Conclusão</h2>
+        <p>
+            Este código é uma demonstração de como usar Python e bibliotecas de terceiros para automatizar tarefas relacionadas ao transporte e atendimento. Ele oferece funcionalidades de leitura de planilhas, criação de mensagens e interação com serviços de mensagens instantâneas.
+        </p>
+        <p>
+            Para informações adicionais e personalizações, consulte o código-fonte e adapte-o às suas necessidades específicas.
+        </p>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2023 Enzo Lelis Musto Macedo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2023 Enzo Lelis Musto Macedo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            var tabs = document.querySelectorAll('.tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = 'none';
+            }
+            document.getElementById(tabName).style.display = 'block';
+        }
+        openTab('tab1');  // Abre a primeira aba por padrão
+    </script>
+</body>
+</html>
